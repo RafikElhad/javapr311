@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Groupe { 
 	
 	private int id; 
-	private String nom; 
+	private String nom;  
 	private LocalDate dateCreation;
 	public int getId() {
 		return id;

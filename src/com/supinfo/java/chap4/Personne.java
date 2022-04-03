@@ -1,36 +1,41 @@
-package com.supinfo.java.chap1;
+package com.supinfo.java.chap4;
 
 import java.time.LocalDate;
 
-public class Personne { 
+public abstract class Personne 
+{ 
 	private int id;    
 	private String prenom;    
 	private String nom; 
 	private LocalDate dateNaissance;   
 	private String adresse; 
 	private String telephone; 
-	private String email; 
+	private String email;  
+	private String lieuNaissance; 
+	private String nationalite;        
+	private String genre; 
+	
 	
 	
 	// Constructeur explicite sans parametre 
 	public Personne() {} 
-	public Personne(int id, String prenom, String nom) 
-	{ 
-		this.id = id; 
-		this.prenom = prenom; 
-		this.nom = nom; 
-	}
 	
 	public Personne(int id, String prenom, String nom,   
 			LocalDate dateNaissance, String adresse, 
-			String telephone, String email)  
+			String telephone, String email, String lieuNaissance, 
+			String nationalite, String genre)   
 	{  
 		
-		this(id, prenom, nom);  
+		this.id = id;  
+		this.prenom = prenom; 
+		this.nom = nom; 
 		this.dateNaissance = dateNaissance;  
 		this.adresse = adresse; 
 		this.telephone = telephone; 
-		this.email = email;   
+		this.email = email;    
+		this.lieuNaissance = lieuNaissance; 
+		this.nationalite = nationalite; 
+		this.genre = genre; 
 		
 	}
 	
@@ -75,14 +80,37 @@ public class Personne {
 	}
 	public void setEmail(String email) { 
 		this.email = email; 
-	}   
+	}
+	public String getLieuNaissance() {
+		return lieuNaissance;
+	}
+	public void setLieuNaissance(String lieuNaissance) {
+		this.lieuNaissance = lieuNaissance;
+	}
+	public String getNationalite() {
+		return nationalite;
+	}
+	public void setNationalite(String nationalite) {
+		this.nationalite = nationalite;
+	}
+	public String getGenre() {
+		return genre;
+	}
+	public void setGenre(String genre) {
+		this.genre = genre;
+	} 
 	
+	public abstract String getNomComplet();
 	
 	@Override
-	public String toString() {
-		return "Personne [id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", dateNaissance=" + dateNaissance
-				+ ", adresse=" + adresse + ", telephone=" + telephone + ", email=" + email + "]";
-	}
+	public String toString() { 
+		return " [id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", dateNaissance=" + dateNaissance
+				+ ", adresse=" + adresse + ", telephone=" + telephone + ", email=" + email + ", lieuNaissance="
+				+ lieuNaissance + ", nationalite=" + nationalite + ", genre=" + genre; 
+	}    
+	
+	
+	
 	
 	
 }
