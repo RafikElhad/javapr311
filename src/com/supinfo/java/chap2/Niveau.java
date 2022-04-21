@@ -7,22 +7,23 @@ public class Niveau
 	
 	private long id; 
 	private String designation;
-	private Inscription inscription; 
-	public static int compteur = 0; 
+	
 	   
 	
-	public Niveau() 
-	{  
-	    
-		Niveau.compteur++;
-		this.id = Niveau.compteur;  
-		
-	} 
+	public Niveau() {}
 	
-	public Niveau(String designation) 
+	public Niveau(long id, String designation)   
 	{
-		this(); 
+		this.id = id;  
 		this.designation = designation; 
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getDesignation() {
@@ -33,28 +34,12 @@ public class Niveau
 		this.designation = designation;
 	}
 
-	public long getId() { 
-		return id;
-	}   
-	
-	public static int getCompteur()      
-	{
-		return  Niveau.compteur; 
-	}
-
-	public Inscription getInscription() {
-		return inscription;
-	}
-
-	public void setInscription(Inscription inscription) {  
-		this.inscription = inscription;
-	}
-
 	@Override
 	public String toString() {
-		return "Niveau [id=" + id + ", designation=" + designation + ", inscription=" + inscription + "]";
+		return "Niveau [id=" + id + ", designation=" + designation + "]";
 	}
- 
+
+	
 	
 	
 	

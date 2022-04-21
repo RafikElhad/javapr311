@@ -14,12 +14,21 @@ public class TestHeritage {
 				"Magoudjou", "77 262 57 42", "rafiou@gmail.com", "Moroni", 
 				"Comorien", "Masculain", "DIDK005373");   
 		
-		List<ContactEtudiant> listContactEtudiant = new ArrayList<>(); 
+		List<ContactEtudiant> listContactEtudiant = new ArrayList<>();  
 		ContactEtudiant contactEtudiant1 = new ContactEtudiant(1,"Rabouanta",
 				"Elhad", "00269 333 46 47", "Magoudjou", "rabouanta@gmail.com",
 				"Tuteur");
+	 
+		
+		ContactEtudiant contactEtudiant2 = new ContactEtudiant(2,"Rafik",
+				"Elhad", "00269 333 46 47", "Hadoudja", "rabouanta@gmail.com",
+				"Tuteur");
+		
 		
 		listContactEtudiant.add(contactEtudiant1);
+		etudiant1.setContactEtudiant(listContactEtudiant); 
+
+		listContactEtudiant.add(contactEtudiant2); 
 		etudiant1.setContactEtudiant(listContactEtudiant); 
 		
 		Prof prof1 = new Prof(1, "Mohamed", "Maoudjoud", dateNaissance2,  "Hadoudja", 
@@ -29,8 +38,9 @@ public class TestHeritage {
 		List<Personne> listPersonne = new ArrayList<>(); 
 		listPersonne.add(etudiant1);
 		listPersonne.add(prof1);
+	
 		
-		for(Personne personne: listPersonne) 
+		for(Personne personne: listPersonne)  
 		{
 			if(personne instanceof Etudiant) 
 			{
@@ -46,6 +56,7 @@ public class TestHeritage {
 			{
 				Prof prof = (Prof) personne; 
 				System.out.println(prof); 
+				System.out.println("Liste des profs");  
 			}
 		}
 		

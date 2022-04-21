@@ -1,4 +1,4 @@
-package com.supinfo.java.chap2;
+package com.supinfo.java.chap5;
 
 import java.util.List;
 
@@ -7,13 +7,13 @@ public class AnneeAcademique
 	
 	private long id; 
 	private String libelle;  
-	private String description; 
+	private String description;  
 	
 	
 	
 	public AnneeAcademique() {}
 	
-	public AnneeAcademique(long id, String libelle, String description)  
+	public AnneeAcademique(long id, String libelle, String description)      
 	{   
 		 
 		this.id = id;

@@ -2,7 +2,7 @@ package com.supinfo.java.chap4;
 
 import java.time.LocalDate;
 
-public abstract class Personne 
+public abstract class Personne  
 { 
 	private int id;    
 	private String prenom;    
